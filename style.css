@@ -1,0 +1,83 @@
+@import url('https://fonts.cdnfonts.com/css/macondo');
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-clr : #204535;
+    --fg-clr : #B8C63B;
+    --main-clr: #327D2D;
+    --half-tone: #9fbf46;
+    --fill-clr: #286730;
+    --link-clr: #590004;
+    --heading-size: 2rem;
+    --content-size: 1rem;
+}
+
+body {
+    font-family: 'Macondo', sans-serif;
+    color: var(--fg-clr)
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-clr);
+    position: fixed;
+    top: 0;
+    z-index: -100;
+}
+
+a {
+    text-decoration: none;   
+    cursor: pointer;
+    color: var(--link-clr)
+}
+
+.text-card{
+    width: max-content;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-grow: 0;
+    flex-shrink: 0;
+    border-radius: 20px;
+    border: solid 4px var(--half-tone);
+    padding-left: 20px;
+    padding-bottom: 50px;
+    padding-top: 30px;
+    padding-right: 50px;
+    background-color: var(--fill-clr);
+    gap: calc(var(--heading-size) / 2)
+}
+
+.text-card h1{
+    font-size: var(--heading-size);
+    font-weight: 800;
+}
+
+.text-card p{
+    font-size: var(--content-size);
+}
+
+.special-text {
+    display: inline;
+    color: var(--link-clr);
+    transition: all linear 100ms;
+}
+
+.special-text:hover{
+    font-weight: 900;
+    font-size: calc(var(--heading-size) * 1.5);
+}
+
+
+.hero {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--heading-size);
+}
